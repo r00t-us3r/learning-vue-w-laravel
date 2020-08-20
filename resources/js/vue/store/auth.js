@@ -15,7 +15,8 @@ export default new Vuex.Store({
         setUserData (state, userData) {
             state.user = userData
             localStorage.setItem('user', JSON.stringify(userData))
-            axios.defaults.headers.common.Authorization = `Bearer ${userData.token}`
+            axios.defaults.headers.common.Authorization = `Bearer ${userData.token}`;
+            console.log(localStorage.getItem('user'));
         },
 
         clearUserData () {
@@ -39,6 +40,9 @@ export default new Vuex.Store({
     },
 
     getters : {
-        isLogged: state => !!state.user
+        isLogged: state => !!state.user,
+        email: state => state.user.user.email,
+        token: state => state.token,
+        user: state => state.user
     }
 })

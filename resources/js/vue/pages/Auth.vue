@@ -29,9 +29,6 @@
             <b-button type="submit" variant="primary">Submit</b-button>
             <b-button type="reset" variant="danger">Reset</b-button>
         </b-form>
-        <b-card class="mt-3" header="Form Data Result">
-            <pre class="m-0">{{ form }}</pre>
-        </b-card>
     </div>
 </template>
 
@@ -48,13 +45,16 @@
         methods: {
             login () {
                 this.$store
+                    // trigger login event which will fire login api call
                     .dispatch('login', {
                         email: this.email,
                         password: this.password
                     })
+                    // afterwards push the user to said page
                     .then(() => {
-                        this.$router.push({ name: 'About' })
+                        this.$router.push({ name: 'home' })
                     })
+                    // catch any errors
                     .catch(err => {
                         console.log(err)
                     })
