@@ -1,3 +1,25 @@
+# About this repo
+
+This repo represents my attempt at learning to use Vue + Bootstrap Vue with Laravel.
+I'm also trying to learn more about Laravel and use as much of Laravel's built in functionality as possible. Examples of what I will / would like to try and include:
+
+ - [ ] Notifications / Broadcasting (Mixer)
+ - [ ] Console Commands / Scheduler
+ - [ ] Events
+ - [ ] Eloquent
+   - [ ] Pagination
+   - [ ] Filtering
+   - [ ] Searching
+ - [x] Authentication
+ - [x] Webpack / NPM / Sass
+ - [ ] Unit testing
+ - [X] Database Seeding / Migrations
+ - [ ] Caching
+ - [ ] Emails
+ - [ ] File Storage (Maybe try AWS S3?)
+ - [ ] Route "resources"
+ - [ ] Requests for Validation)
+
 # Using vue in laravel
 
 ```composer require laravel/ui```
