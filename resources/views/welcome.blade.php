@@ -85,16 +85,7 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <b-button>Docs</b-button>
-                    <b-button>Laracasts</b-button>
-                    <b-button>News</b-button>
-                    <b-button>Blog</b-button>
-                    <b-button>Nova</b-button>
-                    <b-button>Forge</b-button>
-                    <b-button>Vapor</b-button>
-                    <b-button>GitHub</b-button>
-                </div>
+                <random-form></random-form>
             </div>
         </div>
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
