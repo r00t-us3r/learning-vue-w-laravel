@@ -65,6 +65,9 @@ Use the component inside the html, inside the newly created element with the id 
 
 # Third Party Attributes
 
- - [Token Based Authentication w/Vue](https://dev.to/romanpaprotsky/vue-js-token-based-authentication-with-laravel-sanctum-3a84)
+ - [Laravel Docs for Vue](https://laravel.com/docs/7.x/frontend)
  - [Bootstrap Vue w/Laravel](https://stackoverflow.com/questions/55915329/how-to-include-bootstrap-vue-in-laravel)
  - [Bootstrap Vue Docs](https://bootstrap-vue.org/docs/)
+ - [Vue Router](https://laravel-news.com/using-vue-router-laravel)
+ - [Token Based Authentication w/Vue](https://dev.to/romanpaprotsky/vue-js-token-based-authentication-with-laravel-sanctum-3a84)
+ - [Laravel CSRF JS](https://stackoverflow.com/a/45570448)
