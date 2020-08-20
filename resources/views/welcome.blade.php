@@ -88,6 +88,11 @@
                 <random-form></random-form>
             </div>
         </div>
+        <script type="text/javascript">
+            var Laravel = {
+                'csrfToken' : '{{ csrf_token() }}'
+            };
+        </script>
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
