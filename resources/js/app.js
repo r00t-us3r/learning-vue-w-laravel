@@ -19,12 +19,8 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('random-form', require('./components/RandomForm.vue').default);
-
-
+// Load bootstrap-vue
 import BootstrapVue from 'bootstrap-vue' //Importing
-
 Vue.use(BootstrapVue) // Telling Vue to use this in whole application
 
 /**
@@ -33,6 +29,30 @@ Vue.use(BootstrapVue) // Telling Vue to use this in whole application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import App from './vue/App'
+import store from './vue/store/auth'
+import router from './vue/router.index'
+
+Vue.config.productionTip = false
+
 const app = new Vue({
-    el: '#app',
-});
+    router,
+    store,
+    created () {
+        const userInfo = localStorage.getItem('user')
+        if (userInfo) {
+            const userData = JSON.parse(userInfo)
+            this.$store.commit('setUserData', userData)
+        }
+        axios.interceptors.response.use(
+            response => response,
+            error => {
+                if (error.response.status === 401) {
+                    this.$store.dispatch('logout')
+                }
+                return Promise.reject(error)
+            }
+        )
+    },
+    render: h => h(App)
+}).$mount('#app')

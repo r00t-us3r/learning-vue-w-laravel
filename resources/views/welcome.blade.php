@@ -65,7 +65,7 @@
         </style>
     </head>
     <body>
-        <div id="app" class="flex-center position-ref full-height">
+        <div id="appContainer" class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -85,7 +85,9 @@
                     Laravel
                 </div>
 
-                <random-form></random-form>
+                <div id="app">
+                    <app></app>
+                </div>
             </div>
         </div>
         <script type="text/javascript">
