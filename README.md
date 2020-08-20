@@ -40,3 +40,9 @@ Use the component inside the html, inside the newly created element with the id 
 ```
 <new-component></new-component>
 ```
+
+# Third Party Attributes
+
+ - [Token Based Authentication w/Vue](https://dev.to/romanpaprotsky/vue-js-token-based-authentication-with-laravel-sanctum-3a84)
+ - [Bootstrap Vue w/Laravel](https://stackoverflow.com/questions/55915329/how-to-include-bootstrap-vue-in-laravel)
+ - [Bootstrap Vue Docs](https://bootstrap-vue.org/docs/)
