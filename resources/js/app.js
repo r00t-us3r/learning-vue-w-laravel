@@ -23,6 +23,8 @@ window.Vue = require('vue');
 import BootstrapVue from 'bootstrap-vue' //Importing
 Vue.use(BootstrapVue) // Telling Vue to use this in whole application
 
+Vue.component('navbar', require('../views/vue/components/Navbar').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -53,6 +55,5 @@ const app = new Vue({
                 return Promise.reject(error)
             }
         )
-    },
-    render: h => h(App)
+    }
 }).$mount('#app')

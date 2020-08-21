@@ -1,15 +1,12 @@
 <template>
-    <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/home" v-if="isLogged">About</router-link>
-            <router-link to="/auth" v-else>Login</router-link>
-            <button type="button" v-if="isLogged" @click="logout()">Logout</button>
-            <button type="button" v-if="isLogged">
-                Welcome back, {{ user.user.email }}
-            </button>
-        </div>
-        <router-view/>
+    <div v-if="!isLogged">
+        <router-link to="/auth">Login</router-link>
+    </div>
+    <div v-else>
+        <button type="button" @click="logout()">Logout</button>
+        <button type="button">
+            Welcome back, {{ user.user.email }}
+        </button>
     </div>
 </template>
 
