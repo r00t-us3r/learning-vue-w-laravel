@@ -71,3 +71,4 @@ Use the component inside the html, inside the newly created element with the id 
  - [Vue Router](https://laravel-news.com/using-vue-router-laravel)
  - [Token Based Authentication w/Vue](https://dev.to/romanpaprotsky/vue-js-token-based-authentication-with-laravel-sanctum-3a84)
  - [Laravel CSRF JS](https://stackoverflow.com/a/45570448)
+ - [Laravel + Vue](https://blog.pusher.com/why-vuejs-laravel/)
